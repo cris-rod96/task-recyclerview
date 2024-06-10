@@ -2,8 +2,9 @@ package com.example.taskrecyclerview.data
 
 import com.example.taskrecyclerview.classes.Person
 
+
 object PeopleList {
-    private val names = arrayOf(
+    val names = arrayOf(
         "María García",
         "Juan Pérez",
         "Ana Martínez",
@@ -24,12 +25,13 @@ object PeopleList {
         "Fernando Navarro",
         "Marta Castro",
         "Roberto Ramos",
+
     )
     fun generatePeopleList() : List<Person>{
         val peopleList = mutableListOf<Person>()
         for (i in 1..20){
             val person = Person(
-                id = 1,
+                id = i,
                 name= names[i - 1],
                 age=(10..70).random(),
                 gender= if(i % 2 == 0) "Male" else "Female",
